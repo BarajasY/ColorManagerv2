@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ColorManagerv2.props" />
+</Project>
