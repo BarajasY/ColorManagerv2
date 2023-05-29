@@ -4,44 +4,26 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Color1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Color2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Color3)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="browseContainer">
+    <div class="browseContent">
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color3)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+            <div class="colorWrapper">
+                <section class="colorContainer" style="background: @item.Color1">
+                    <div class="circle" style="background: @item.Color3;"></div>
+                    <h1 class="colorTitle" style="color: @item.Color2">ColorManager</h1>
+                </section>
+                <section class="colorOptions">
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </section>
+            </div>
 }
-    </tbody>
-</table>
+    </div>
+</div>
+
+
+@*@Html.DisplayFor(modelItem => item.Color1)
+
+<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@

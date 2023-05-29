@@ -4,39 +4,37 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
 
-<h4>Color</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="editContainer">
+    <div class="editContent">
+       <h1>Edit</h1>
+       <p>(Click)</p>
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Color1" class="control-label"></label>
-                <input asp-for="Color1" class="form-control" />
-                <span asp-validation-for="Color1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Color2" class="control-label"></label>
-                <input asp-for="Color2" class="form-control" />
-                <span asp-validation-for="Color2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Color3" class="control-label"></label>
-                <input asp-for="Color3" class="form-control" />
-                <span asp-validation-for="Color3" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <section>
+                <div class="editInput">
+                    <label asp-for="Color1" class="control-label"></label>
+                    <input asp-for="Color1" type="color" class="form-control" />
+                    <span asp-validation-for="Color1" class="text-danger"></span>
+                </div>
+                <div class="editInput">
+                    <label asp-for="Color2" class="control-label"></label>
+                    <input asp-for="Color2" type="color" class="form-control" />
+                    <span asp-validation-for="Color2" class="text-danger"></span>
+                </div>
+                <div class="editInput">
+                    <label asp-for="Color3" class="control-label"></label>
+                    <input asp-for="Color3" type="color" class="form-control" />
+                    <span asp-validation-for="Color3" class="text-danger"></span>
+                </div>
+            </section>
+            <div class="editSubmit">
+                <input type="submit" value="Save"/>
+            <a asp-action="Index" class="returnButton">Regresar</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iGYIkgct/kP/Pne3OnGxGJkHbEhuwba2ZtOk6+hdChI=",
+  "Hash": "sOn9cLD3UG3LiauQ3syt4RkFAtDNuefmPuVY3d+M5P4=",
   "Source": "ColorManagerv2",
   "BasePath": "_content/ColorManagerv2",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\yahir\\source\\repos\\ColorManagerv2\\wwwroot\\css\\variables.css",
+      "SourceId": "ColorManagerv2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yahir\\source\\repos\\ColorManagerv2\\wwwroot\\",
+      "BasePath": "_content/ColorManagerv2",
+      "RelativePath": "css/variables.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\variables.css"
     },
     {
       "Identity": "C:\\Users\\yahir\\source\\repos\\ColorManagerv2\\wwwroot\\favicon.ico",
