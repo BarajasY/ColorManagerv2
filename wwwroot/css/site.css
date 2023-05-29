@@ -373,6 +373,33 @@ body {
     background: var(--darkblue);
 }
 
+.detailsContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsContent {
+    width: 60%;
+}
+
+.detailsColor {
+    margin: 10px 0px;
+    border: 2px solid var(--darkblue);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.detailsColor article{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--grayblue);
+}
+
 @media only screen and (max-width: 991px) {
     .navbarContent {
         width: 400px;

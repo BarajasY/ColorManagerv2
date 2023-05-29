@@ -4,33 +4,32 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
 
-<div>
-    <h4>Color</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Color1)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Color1)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Color2)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Color2)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Color3)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Color3)
-        </dd>
-    </dl>
+<div class="detailsContainer">
+    <h1>Details</h1>
+    <div class="detailsContent">
+        <div class="detailsColor">
+            <h1>@Html.DisplayNameFor(model => model.Color1)</h1>
+            <article style="background: @Model.Color1;">
+                <h1>@Model.Color1</h1>
+            </article>
+        </div>
+        <div class="detailsColor">
+            <h1>@Html.DisplayNameFor(model => model.Color2)</h1>
+            <article style="background: @Model.Color2;">
+                <h1>@Model.Color2</h1>
+            </article>
+        </div>
+        <div class="detailsColor">
+            <h1>@Html.DisplayNameFor(model => model.Color3)</h1>
+            <article style="background: @Model.Color3;">
+                <h1>@Model.Color3</h1>
+            </article>
+        </div>
+    </div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="returnButton">Edit</a> |
+    <a asp-action="Index" class="returnButton">Regresar</a>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+@*@Html.DisplayNameFor(model => model.Color1)
+@Html.DisplayFor(model => model.Color1)*@

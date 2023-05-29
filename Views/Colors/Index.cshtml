@@ -8,13 +8,14 @@
     <div class="browseContent">
 @foreach (var item in Model) {
             <div class="colorWrapper">
-                <section class="colorContainer" style="background: @item.Color1">
+                <section class="colorContainer" style="background: @item.Color1;">
                     <div class="circle" style="background: @item.Color3;"></div>
                     <h1 class="colorTitle" style="color: @item.Color2">ColorManager</h1>
                 </section>
                 <section class="colorOptions">
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                 </section>
             </div>
 }
